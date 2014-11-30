@@ -5,6 +5,10 @@ public class Problem4 {
 	}
 
 	public static void replaceSpaces(char[] str, int length) {
+		if(length < 1) {
+			System.out.println("");
+			return;
+		}
 		int cnt = 0;
 		for(int i = 0 ; i < length ; i ++ ) {
 			if(str[i] == ' ') {
