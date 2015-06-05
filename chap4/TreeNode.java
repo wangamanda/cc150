@@ -18,6 +18,9 @@ public class TreeNode {
 	}
 
 	public int getHeight() {
+		if (this == null) {
+			return 0;
+		}
 		if (left == null && right == null) {
 			return 1;
 		}
@@ -31,6 +34,9 @@ public class TreeNode {
 	}
 
 	public boolean isBalanced() {
+		if (this == null) {
+			return true;
+		}
 		if (left == null && right == null) {
 			return true;
 		}
