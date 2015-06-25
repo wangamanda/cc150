@@ -25,7 +25,7 @@ public class Problem7 {
 	public static String numToString1000(int n) {
 		String str = "";
 		if (n >= 100) {
-			str = digits[n/100 - 1] + " " + "hundred" + str;
+			str = digits[n/100 - 1] + " " + "hundred " + str;
 			n %= 100;
 		}
 		if (n >= 11 && n <= 19) {
@@ -35,6 +35,11 @@ public class Problem7 {
 				str = str + " " + tens[n/10 - 1];
 				n %= 10;
 			}
+			if (n == 10) {
+				str = str + "ten";
+				n -= 10;
+			}
+
 			if (n >= 1) {
 				str = str + " " + digits[n - 1];
 			}
